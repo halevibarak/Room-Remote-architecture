@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BarakApp.iml" filepath="$PROJECT_DIR$/BarakApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mvvm-aac-rxjava-retrofit-room.iml" filepath="$PROJECT_DIR$/mvvm-aac-rxjava-retrofit-room.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/mvvm-aac-rxjava-retrofit-room-master.iml" filepath="$PROJECT_DIR$/.idea/mvvm-aac-rxjava-retrofit-room-master.iml" />
     </modules>
   </component>
 </project>

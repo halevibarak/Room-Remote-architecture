@@ -1,25 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<FrameLayout
+    android:id="@+id/container"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    tools:context="com.zhuinden.mvvmaacrxjavaretrofitroom.MainActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/contact_list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
-    <TextView
-        android:id="@+id/wait_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginTop="150dp"
-        android:paddingTop="11dp"
-        android:textColor="#373c41"
-        android:text="@string/wait"
-        android:visibility="gone"
-        android:textSize="60dp" />
-
-</RelativeLayout>
+</FrameLayout>
