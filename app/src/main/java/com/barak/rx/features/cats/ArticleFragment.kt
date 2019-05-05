@@ -17,7 +17,7 @@ import io.reactivex.Observable
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.plusAssign
 import io.reactivex.rxkotlin.subscribeBy
-import kotlinx.android.synthetic.main.fragment_cats.*
+import kotlinx.android.synthetic.main.fragment_art.*
 
 class ArticleFragment : Fragment() {
     private lateinit var articleViewModel: ArticleViewModel
@@ -33,7 +33,7 @@ class ArticleFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
-        inflater.inflate(R.layout.fragment_cats, container, false)
+        inflater.inflate(R.layout.fragment_art, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -49,10 +49,10 @@ class ArticleFragment : Fragment() {
             articleAdapter.updateData(list)
         })
 
-        compositeDisposable += Observable.create(RecyclerViewScrollBottomOnSubscribe(catRecyclerView))
+        compositeDisposable.add(Observable.create(RecyclerViewScrollBottomOnSubscribe(catRecyclerView))
             .subscribeBy(onNext = { isScroll ->
                 articleViewModel.handleScrollToBottom(isScroll)
-            })
+            }))
 
         compositeDisposable += articleViewModel.openArticleEvent.subscribeBy(onNext = { article ->
             val activity = requireActivity()

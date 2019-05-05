@@ -11,7 +11,7 @@ import io.reactivex.rxkotlin.subscribeBy
 class ArticleViewModel(
         private val articleRepository: ArticleRepository
 ) : ViewModel() {
-    private val cats: Flowable<List<Article>> = articleRepository.startListeningForCats()
+    private val cats: Flowable<List<Article>> = articleRepository.startListeningForArticles()
 
     val openArticleEvent = PublishRelay.create<Article>()!!
 

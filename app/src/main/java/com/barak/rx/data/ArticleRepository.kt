@@ -19,7 +19,7 @@ class ArticleRepository(
         const val TAG = "ArticleRepository"
     }
 
-    fun startListeningForCats(): Flowable<List<Article>> =
+    fun startListeningForArticles(): Flowable<List<Article>> =
         catDao.listenForArticles()
             .distinctUntilChanged()
             .observeOn(mainScheduler.asRxScheduler())
